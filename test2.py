@@ -1,11 +1,11 @@
 from machine import Pin
 import time
 
-green_led = Pin(15, Pin.OUT)
-yellow_led = Pin(2, Pin.OUT)
-red_led = Pin(4, Pin.OUT)
+green_led = Pin(34, Pin.OUT)
+yellow_led = Pin(39, Pin.OUT)
+red_led = Pin(36, Pin.OUT)
 
-button = Pin(14, Pin.IN, Pin.PULL_UP)
+button = Pin(25, Pin.IN, Pin.PULL_UP)
 
 leds = [green_led, yellow_led, red_led]
 current_led = 0  # Start with green LED
