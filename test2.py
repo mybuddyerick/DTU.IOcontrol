@@ -1,22 +1,24 @@
 from machine import Pin
 import time
 
-green_led = Pin(34, Pin.OUT)
-yellow_led = Pin(39, Pin.OUT)
-red_led = Pin(36, Pin.OUT)
+green_led = Pin(13, Pin.OUT)
+yellow_led = Pin(12, Pin.OUT)
+red_led = Pin(27, Pin.OUT)
 
 button = Pin(25, Pin.IN, Pin.PULL_UP)
 
 leds = [green_led, yellow_led, red_led]
-current_led = 0  # Start with green LED
+current_led = 0
+
+green_led.on()
 
 def clear_leds():
     for led in leds:
         led.value(0)
 
-# Ensure only the first LED (green) is ON at startup
 clear_leds()
-leds[current_led].value(1)
+
+leds[current_led].value(1) # turns on led
 
 while True:
     if button.value() == 0: 
