@@ -10,8 +10,6 @@ button = Pin(25, Pin.IN, Pin.PULL_UP)
 leds = [green_led, yellow_led, red_led]
 current_led = 0
 
-green_led.on()
-
 def clear_leds():
     for led in leds:
         led.value(0)
