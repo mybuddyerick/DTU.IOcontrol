@@ -33,12 +33,12 @@ sensor = MCP9808(i2c)
 
 while True:
     temp = sensor.temperature
-    # print("Temperature: {:.2f} °C".format(temp))
+    print("Temperature: {:.2f} °C".format(temp))
     clear_leds()
-    if temp < 26:
+    if temp < 25:
         green_led.value(1)
-    elif temp < 28:
+    elif temp < 26:
         yellow_led.value(1)
     else:
         red_led.value(1)
-    time.sleep(0.1)
+    time.sleep(0.2)

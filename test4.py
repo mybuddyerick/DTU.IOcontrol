@@ -48,11 +48,11 @@ turn_off_all()
 
 while True:
     temp = sensor.temperature
-    # print("Temperature: {:.2f} °C".format(temp))
-    if temp < 26:
+    print(f"Temperature: {temp:.2f} °C", end='\r')
+    if temp < 25:
         set_green()
-    elif temp < 28:
+    elif temp < 26:
         set_yellow()
     else:
         set_red()
-    time.sleep(0.1)
+    time.sleep(0.2)
