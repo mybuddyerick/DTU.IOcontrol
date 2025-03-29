@@ -1,6 +1,13 @@
 from machine import Pin
 import time
 
+'''
+PIN LOCATION:
+
+RED - 13
+BUTTON - 25
+'''
+
 red_led = Pin(13, Pin.OUT)      
 button = Pin(25, Pin.IN, Pin.PULL_UP) 
 

@@ -1,9 +1,18 @@
 from machine import Pin
 import time
 
-green_led = Pin(13, Pin.OUT)
-yellow_led = Pin(12, Pin.OUT)
-red_led = Pin(27, Pin.OUT)
+'''
+PIN LOCATION:
+
+RED - 33
+YELLOW - 27
+GREEN - 12
+BUTTON - 25
+'''
+
+green_led = Pin(12, Pin.OUT)
+yellow_led = Pin(27, Pin.OUT)
+red_led = Pin(33, Pin.OUT)
 
 button = Pin(25, Pin.IN, Pin.PULL_UP)
 
@@ -29,3 +38,4 @@ while True:
         clear_leds()
         current_led = (current_led + 1) % len(leds)  # Move to the next LED in sequence
         leds[current_led].value(1)  # Turn ON new LED
+        
