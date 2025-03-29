@@ -20,8 +20,6 @@ green_led = Pin(12, Pin.OUT)
 yellow_led = Pin(27, Pin.OUT)
 red_led = Pin(33, Pin.OUT)
 
-button = Pin(25, Pin.IN, Pin.PULL_UP)
-
 leds = [green_led, yellow_led, red_led]
 
 def clear_leds():
@@ -35,7 +33,7 @@ sensor = MCP9808(i2c)
 
 while True:
     temp = sensor.temperature
-    print("Temperature: {:.2f} °C".format(temp))
+    # print("Temperature: {:.2f} °C".format(temp))
     clear_leds()
     if temp < 26:
         green_led.value(1)
