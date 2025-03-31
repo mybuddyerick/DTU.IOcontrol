@@ -8,7 +8,7 @@ RED - 13
 BUTTON - 25
 '''
 
-red_led = Pin(13, Pin.OUT)      
+red_led = Pin(33, Pin.OUT)      
 button = Pin(25, Pin.IN, Pin.PULL_UP) 
 
 while True:
